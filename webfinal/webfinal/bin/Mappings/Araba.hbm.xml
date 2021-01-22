@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" namespace="webfinal.Models" assembly="webfinal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Araba" table="Araba">
+    <id name="Id" type="Int32">
+      <generator class="native" />
+    </id>
+    <property name="Marka" length="20" />
+    <property name="Model" length="20" />
+    <property name="Yil" />
+    <property name="MotorGucu" />
+    <set name="Aliciler" inverse="true" cascade="all">
+      <key column="Araba" />
+      <one-to-many class="Alici" />
+    </set>
+  </class>
+</hibernate-mapping>

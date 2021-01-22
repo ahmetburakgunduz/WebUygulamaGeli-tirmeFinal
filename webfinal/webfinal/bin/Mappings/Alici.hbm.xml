@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<hibernate-mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" namespace="webfinal.Models" assembly="webfinal, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" xmlns="urn:nhibernate-mapping-2.2">
+  <class name="Alici" table="Alici">
+    <id name="Id" type="Int32">
+      <generator class="native" />
+    </id>
+    <property name="Ad" length="10" />
+    <property name="Soyad" length="10" />
+    <many-to-one name="Araba" />
+  </class>
+</hibernate-mapping>
